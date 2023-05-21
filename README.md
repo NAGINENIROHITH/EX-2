@@ -1,6 +1,6 @@
-# 19CS406-EX-1 STUDY OF SOCKET PROGRAMMING WITH CLIENT-SERVER MODEL
+## EX-2 IMPLEMENTATION OF STOP AND WAIT PROTOCOL
 
-# DATE : 09-03-2023
+# DATE : 16-03-2023
 
 ## AIM :  To write a python program to perform stop and wait protocol
 
@@ -18,7 +18,7 @@
 
 ## PROGRAM :
 ## CLIENT:
-
+```
 import socket
 s=socket.socket()
 s.bind(('localhost',8000))
@@ -34,16 +34,16 @@ while True:
     else:
         c.close()
         break
-
+```
 ## SERVER:
-
+```
 import socket
 s=socket.socket()
 s.connect(('localhost',8000))
 while True:
     print(s.recv(1024).decode())
     s.send("Acknowledgement Recived".encode())
-
+```
 ## OUTPUT:
 ## CLIENT OUTPUT:
 ![Screenshot from 2023-05-19 22-18-19](https://github.com/NAGINENIROHITH/19CS406-EX-1/assets/118344049/065a539f-c889-4520-bd16-11b777c14ab9)
